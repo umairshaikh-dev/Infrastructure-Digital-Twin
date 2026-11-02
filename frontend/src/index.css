@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  body {
+    @apply bg-twin-bg text-twin-navy font-sans antialiased min-h-screen overflow-x-hidden;
+  }
+}
+
+/* Custom Scrollbar — Light Theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Subtle grid pattern for topology canvas */
+.cyber-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 95, 204, 0.5) 1px, transparent 1px);
+}
+
+/* Subtle card shadows — no glowing */
+.shadow-card-blue {
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.08);
+}
+
+.shadow-card-rose {
+  box-shadow: 0 1px 3px rgba(220, 38, 38, 0.08);
+}
+
+.shadow-card-emerald {
+  box-shadow: 0 1px 3px rgba(5, 150, 98, 0.08);
+}
+
+.shadow-card-amber {
+  box-shadow: 0 1px 3px rgba(217, 119, 6, 0.08);
+}
+
+/* Legacy glow class aliases — mapped to subtle shadows for light theme */
+.glow-box-blue {
+  box-shadow: 0 1px 4px rgba(37, 99, 235, 0.1);
+}
+.glow-box-rose {
+  box-shadow: 0 1px 4px rgba(220, 38, 38, 0.1);
+}
+.glow-box-emerald {
+  box-shadow: 0 1px 4px rgba(5, 150, 98, 0.1);
+}
+.glow-box-amber {
+  box-shadow: 0 1px 4px rgba(217, 119, 6, 0.1);
+}
+
+/* Pulse ring animation */
+@keyframes pulseRing {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.2; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.pulse-ring {
+  animation: pulseRing 2.5s infinite ease-in-out;
+}
+
+/* Login page background pattern */
+.login-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(2, 204, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(37, 99, 235, 0.02) 0%, transparent 50%);
+}
